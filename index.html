@@ -1,15 +1,88 @@
+<!DOCTYPE html>
 <html>
 
   <head>
-
     <title>Daschel Fortner's Personal Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
 
   </head>
 
   <body>
 
     <div>
-      <h1>Daschel Fortner</h1>
+      <div id="header">
+        <h1>Daschel Fortner</h1>
+      </div>
+
+      <div id="date-bar">
+        <h4 id="date-header"></h4>
+        <script type="text/javascript">
+          var months = [ 'January', 'February', 'March', 'April', 'May', 'June',
+                         'July', 'August', 'September', 'October', 'November',
+                         'December' ];
+          var days   = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday',
+                         'Friday', 'Saturday' ];
+
+          var today      = new Date(Date.now());
+          var dateString = days[today.getDay()] + ', ' + months[today.getMonth()]
+                            + ' ' + today.getDate() + ', ' + today.getFullYear();
+          var dateHeader = document.getElementById("date-header");
+          dateHeader.innerHTML = dateString;
+        </script>
+      </div>
+
+      <div id="image-section">
+        <img src="old-timey-desk.jpg" alt="You can't handle a thousand words.">
+        </img>
+      </div>
+
+      <div id="redirect-section">
+
+        <div class="redirect-box">
+          <h4>
+            ABOUT ME
+          </h4>
+          <p>
+            If your interest is piqued by the curiousities currently on display,
+            consider inquiring further into the life of Daschel Fortner by 
+            clicking on the link below. You will most likely discover nothing 
+            of real value, leaving you slightly disappointed. You will most 
+            definitely satisfy your own curiosity, and your fate appears much 
+            more promising than the cat's.
+          </p>
+          <button ></button>
+        </div>
+
+        <div class="redirect-box">
+          <h4>
+            RESUME
+          </h4>
+          <p>
+            To inquire concerning my whereabouts in the past, and the present,
+            consider clicking on the link below. If you are a learned man, and
+            you care for that sort of thing, this section reveals my education.
+            It also reveals my previous places of employment, as well as 
+            current positions I hold. 
+          </p>
+          <button ></button>
+        </div>
+
+        <div class="redirect-box">
+          <h4>
+            CONTACT ME
+          </h4>
+          <p>
+            As the late great Alexander Graham Bell remarked, "Come Dr. Watson,
+            I need you," here you can follow in his steps by saying, "Come, Mr.
+            Fortner, I need you." If your needs are quite as urgent as that, 
+            however, perhaps you might consider contacting another individual
+            closer to you than I. Nevertheless, the following link will provide
+            you with a multitude of media through which you can inquire further
+            of me.
+          </p>
+          <button ></button>
+        </div>
+      </div>
 
     </div>
 
