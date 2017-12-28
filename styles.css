@@ -1,0 +1,7 @@
+:root {
+  --cream: #ffff22;
+}
+
+.body {
+  background: var(--cream);
+}
