@@ -1,20 +1,28 @@
 :root {
-  --cream: #ffffd7;
+  --cream: #edd2b8;
   --dark: #3a2406;
+  --fade: #b78d89;
+}
+
+html {
+  background: var(--cream);
+  box-shadow: inset 0px 0px 300px var(--fade);
 }
 
 body {
-  background: var(--cream);
   margin: 0;
 }
 
 
 #header {
-  width: 100%;
-  text-align: center;
-  height: 140px;
-  line-height: 140px;
+  padding-top: 30px;
+  margin: auto;
+  width: 90%;
   color: var(--dark);
+}
+
+#header img {
+  width: 100%;
 }
 
 #date-bar {
@@ -54,19 +62,40 @@ body {
   width: 33%;
 }
 
-.redirect-box h4 {
+.redirect-box h2 {
+  margin: auto;
+  margin-bottom: 20px;
+  width: 80%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--dark);
   text-align: center;
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
 }
 
 .redirect-box p {
   text-align: justify;
   padding-left: 15px;
   padding-right: 15px;
+  font-family: Cambria, Georgia, serif;
+}
+
+.finger-button {
+  margin: auto;
+  background-image: url("images/old-timey-finger.png");
+  background-size: 100%;
+  width: 100px;
+  height: 56px;
+}
+
+.finger-button:hover {
+  transform: translate(10px);
+  cursor: pointer;
 }
 
 #image-section {
   margin: auto;
-  width: 70%;
+  width: 60%;
   text-align: center;
 }
 
