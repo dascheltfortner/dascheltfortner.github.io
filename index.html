@@ -3,7 +3,8 @@
 
   <head>
     <title>Daschel Fortner's Personal Page</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/header.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,84 +12,65 @@
 
   <body>
 
-    <div>
-      <div id="header">
-        <img src="images/old-timey-banner.svg" alt="You can't handle a thousand words.">
-        </img>
-      </div>
-
-      <div id="date-bar">
-        <h4 id="date-header"></h4>
-        <script type="text/javascript">
-          var months = [ 'January', 'February', 'March', 'April', 'May', 'June',
-                         'July', 'August', 'September', 'October', 'November',
-                         'December' ];
-          var days   = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday',
-                         'Friday', 'Saturday' ];
-
-          var today      = new Date(Date.now());
-          var dateString = days[today.getDay()] + ', ' + months[today.getMonth()]
-                            + ' ' + today.getDate() + ', ' + today.getFullYear();
-          var dateHeader = document.getElementById("date-header");
-          dateHeader.innerHTML = dateString;
-        </script>
-      </div>
-
-      <div id="image-section">
-        <img src="images/old-timey-desk.jpg" alt="You can't handle a thousand words.">
-        </img>
-      </div>
-
-      <div id="redirect-section">
-
-        <div class="redirect-box">
-          <h2>
-            ABOUT ME
-          </h2>
-          <div class="finger-button"></div>
-          <p>
-            If your interest is piqued by the curiousities currently on display,
-            consider inquiring further into the life of Daschel Fortner by 
-            clicking on the link below. You will most likely discover nothing 
-            of real value, leaving you slightly disappointed. You will most 
-            definitely satisfy your own curiosity, and your fate appears much 
-            more promising than the cat's.
-          </p>
-        </div>
-
-        <div class="redirect-box">
-          <h2>
-            RESUME
-          </h2>
-          <div class="finger-button"></div>
-          <p>
-            To inquire concerning my whereabouts in the past, and the present,
-            consider clicking on the link below. If you are a learned man, and
-            you care for that sort of thing, this section reveals my education.
-            It also reveals my previous places of employment, as well as 
-            current positions I hold. 
-          </p>
-        </div>
-
-        <div class="redirect-box">
-          <h2>
-            CONTACT ME
-          </h2>
-          <div class="finger-button"></div>
-          <p>
-            As the late great Alexander Graham Bell remarked, "Come Dr. Watson,
-            I need you," here you can follow in his steps by saying, "Come, Mr.
-            Fortner, I need you." If your needs are quite as urgent as that, 
-            however, perhaps you might consider contacting another individual
-            closer to you than I. Nevertheless, the following link will provide
-            you with a multitude of media through which you can inquire further
-            of me.
-          </p>
-        </div>
-      </div>
-
+    <div class="vignette">
     </div>
 
-  </body>
+    <div id="header">
+      <script type="text/javascript" src="header.js"></script>
+    </div>
 
+    <div id="image-section">
+      <img src="images/old-timey-desk.jpg" alt="You can't handle a thousand words.">
+      </img>
+    </div>
+
+    <div id="redirect-section">
+
+      <div class="redirect-box">
+        <h2>
+          ABOUT ME
+        </h2>
+        <a href="about.html" class="finger-button"></a>
+        <p>
+          If your interest is piqued by the curiousities currently on display,
+          consider inquiring further into the life of Daschel Fortner here.
+          You will most likely discover nothing of real value, with a high 
+          probability of disappointment. You will, however, most definitely 
+          satisfy your own curiosity, and your fate appears much more 
+          promising than the cat's.
+        </p>
+      </div>
+
+      <div class="redirect-box">
+        <h2>
+          RESUME
+        </h2>
+        <a href="about.html" class="finger-button"></a>
+        <p>
+          To inquire concerning my whereabouts in the past, and the present,
+          enter here. There comes a time in a man's life when he must face 
+          the fact that, though man cannot live by bread alone, he must eat 
+          bread. It is a feature of reality that such wares require finances.
+          Here, you can learn about the various avenues through which I have 
+          attained said bread. 
+        </p>
+      </div>
+
+      <div class="redirect-box">
+        <h2>
+          CONTACT ME
+        </h2>
+        <a href="about.html" class="finger-button"></a>
+        <p>
+          As the late great Alexander Graham Bell remarked, "Come Dr. Watson,
+          I need you," here you can follow in his steps by saying, "Come, Mr.
+          Fortner, I need you." If your needs are quite as urgent as that, 
+          however, perhaps you might consider contacting another individual
+          closer to you than I. Nevertheless, the following link will provide
+          you with a multitude of media through which you can inquire further
+          of me.
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
