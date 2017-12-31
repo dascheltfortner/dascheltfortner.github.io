@@ -1,5 +1,6 @@
 #flex-wrapper {
   align-items: stretch;
+  flex-wrap: wrap;
   display: flex;
 }
 
@@ -11,6 +12,7 @@
   margin: auto;
   padding-top: 10px;
   width: 45%;
+  min-width: 270px;
 }
 
 #tall-box h3 {
