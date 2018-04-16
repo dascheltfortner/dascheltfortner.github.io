@@ -1,0 +1,43 @@
+:root {
+  --cream: #edd2b8;
+  --dark: #3a2406;
+  --fade: #b78d89;
+}
+
+body {
+  margin:          auto;
+  max-width:       1280px;
+}
+
+p {
+  font-family: Cambria, Georgia, serif;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: justify;
+}
+
+.finger-button {
+  background:      url("../images/old-timey-finger.png");
+  background-size: 100%;
+  border:          none;
+  display:         block;
+  height:          56px;
+  margin:          auto;
+  width:           100px;
+}
+
+.finger-button:hover {
+  cursor:          pointer;
+  transform:       translate(10px);
+}
+
+.vignette {
+  background:      var(--cream);
+  box-shadow:      inset 0px 0px 300px var(--fade);
+  height:          100%;
+  left:            0;
+  position:        fixed;
+  top:             0;
+  width:           100%;
+  z-index:         -100;
+}

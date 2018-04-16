@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Cache Simulator</title>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+
+    <div class="vignette">
+    </div>
+   
+    <div class="titled-table">
+      <h3>Main Memory</h3>
+      <div class="table-wrapper">
+        <div class="table-container">
+          <table id="memory-table0" class="table">
+            <tr class="table-header">
+              <th>Address</th>
+              <th>Data</th>
+            </tr>
+          </table>
+        </div>
+        <div class="table-container">
+          <table id="memory-table1" class="table">
+            <tr class="table-header">
+              <th>Address</th>
+              <th>Data</th>
+            </tr>
+          </table>
+        </div>
+        <div class="table-container">
+          <table id="memory-table2" class="table">
+            <tr class="table-header">
+              <th>Address</th>
+              <th>Data</th>
+            </tr>
+          </table>
+        </div>
+        <div class="table-container">
+          <table id="memory-table3" class="table">
+            <tr class="table-header">
+              <th>Address</th>
+              <th>Data</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="titled-table">
+      <h3>Cache</h3>
+      <div class="table-wrapper">
+        <div class="table-container">
+          <table id="cache-table-setNum" class="table">
+            <tr class="table-header">
+              <th>Set</th>
+            </tr>
+          </table>
+        </div>
+        <div class="table-container">
+          <table id="cache-table-set0" class="table">
+            <tr class="table-header">
+              <th>Tag</th>
+              <th>Data</th>
+            </tr>
+          </table>
+        </div>
+        <div class="table-container">
+          <table id="cache-table-set1" class="table">
+            <tr class="table-header">
+              <th>Tag</th>
+              <th>Data</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="result-display">
+      <h2>Memory Query</h2>
+      <form>
+        <input type="radio" id="fifo-radio" name="replacement" checked="checked">
+        <label for="fifo">FIFO Replacement</label>
+
+        <input type="radio" id="lru-radio" name="replacement">
+        <label for="lru">LRU Replacement</label>
+      </form>
+
+      <br/>
+
+      <input id="memory-box" type="text"/>
+      <button onclick="query()">Query</button>
+    </div>
+
+    <script type="text/javascript" src="state.js">
+    </script>
+
+    <script type="text/javascript" src="fillTables.js">
+    </script>
+
+    <script type="text/javascript" src="main.js">
+    </script>
+
+    <script type="text/javascript">
+      initMemory();
+      var state = getDefaultState();
+      console.log(state);
+      initCache();
+      setCache(state);
+      
+      var query = function() {
+        var memoryLocation = document.getElementById('memory-box').value;
+
+        if(isValid(memoryLocation)) {
+          var newState = generateNewState(state, memoryLocation);
+          setCache(newState);
+          state = newState;
+        }
+      }
+    </script>
+
+  </body>
+
+</html>
+

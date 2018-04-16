@@ -1,0 +1,18 @@
+.project-box {
+  border-bottom: 3px solid var(--dark);
+  margin: auto;
+  padding-bottom: 30px;
+  width: 90%;
+}
+
+.project-paragraph {
+  padding-bottom: 20px;
+}
+
+.project-box h2 {
+  border-bottom: 1px solid var(--dark);
+  border-top: 2px solid var(--dark);
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: center;
+}
