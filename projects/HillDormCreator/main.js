@@ -64,8 +64,9 @@ const render = () => {
   Items.forEach(item => item.render(Context));
 };
 
-let draggedItem = {};
+let draggedItem = null;
 let mousePosition = { x: 0, y: 0 };
+let bunked = true;
 
 const updateMousePosition = event => {
   let canvasBounds = CanvasElement.getBoundingClientRect();
@@ -78,7 +79,7 @@ const updateMousePosition = event => {
 const onMouseMove = event => {
   let previousMousePosition = Object.assign({}, mousePosition);
   updateMousePosition(event);
-  if(draggedItem != {}) {
+  if(draggedItem) {
     let dx = mousePosition.x - previousMousePosition.x;
     let dy = mousePosition.y - previousMousePosition.y;
     draggedItem.translate(dx, dy);
@@ -105,12 +106,42 @@ const onMouseDown = event => {
   }
 };
 
-const onMouseDrag = event => {
+const flipRoom = () => {
+  let ac = Items.find(item => item.label === 'AC Unit');
+  let win = Items.find(item => item.label === 'Window');
+
+  if(ac.xPos === 0) {
+    ac.xPos = RoomWidth - Dimensions.ac[0];
+    win.xPos = feet(2) + inches(4);
+  } else {
+    ac.xPos = 0;
+    win.xPos = RoomWidth - Dimensions.window[0] - feet(2) - inches(4);
+  }
+
+  render();
+};
+
+const flipBunkStatus = () => {
+  if(bunked) {
+    Items.push(createEntity(Dimensions.bed, RoomWidth / 2 - Dimensions.bed[0], feet(3), WoodColor, 'Bed', false));
+    changeBunkButtonText('Bunk');
+    bunked = false;
+  } else {
+    Items.pop(Items.find(item => item.label === 'Bed'));
+    changeBunkButtonText('Unbunk');
+    bunked = true;
+  }
+
+  render();
+};
+
+const changeBunkButtonText = text => {
+  document.getElementById('bunk-button').value = text;
 };
 
 CanvasElement.addEventListener('mousemove', onMouseMove);
 CanvasElement.addEventListener('mousedown', onMouseDown);
-CanvasElement.addEventListener('mouseup', () => draggedItem = {});
+CanvasElement.addEventListener('mouseup', () => draggedItem = null);
 CanvasElement.addEventListener('dblclick', onMouseDoubleClick);
 
 render();

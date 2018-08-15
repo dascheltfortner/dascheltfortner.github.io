@@ -13,6 +13,17 @@
     <div id="room-canvas-wrapper">
       <canvas id="room-canvas"></canvas>
     </div> 
+    <div id="controls">
+      <h4>Controls</h4>
+      <!--
+      <input name="beds-bunked" type="checkbox">
+      <label for="beds-bunked">Beds Bunked</label>
+      -->
+      <div id="input-wrapper">
+        <input onclick="flipRoom()" type="button" value="Flip Room"></input>
+        <input onclick="flipBunkStatus()" id="bunk-button" type="button" value="Unbunk"></input>
+      </div>
+    </div>
   </div> 
   <script src="entity.js" type="text/javascript"></script>
   <script src="movableEntity.js" type="text/javascript"></script>
