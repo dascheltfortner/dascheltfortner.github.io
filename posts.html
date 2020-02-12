@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Daschel Fortner's Personal Page</title>
+    <link rel="stylesheet" type="text/css" href="styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles/header.css" />
+    <link rel="stylesheet" type="text/css" href="styles/projects.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+
+  <body id="main-body">
+
+    <div class="vignette">
+    </div>
+
+    <div id="header">
+      <script type="text/javascript" src="header.js"></script>
+    </div>
+
+    <script type="text/javascript" src="posts/post.js"></script>
+    <script type="text/javascript">
+    
+      let root = document.getElementById('main-body')
+      // Loop through all the available posts
+      for(let key in POSTS) {
+        let container = document.createElement('div')
+        container.setAttribute('class', 'project-box')
+
+        let heading = document.createElement('h2')
+        heading.innerHTML = key
+        container.appendChild(heading)
+
+        let link = document.createElement('a')
+        link.setAttribute('href', `posts/view-post.html?post=${encodeURIComponent(POSTS[key])}`)
+        link.setAttribute('class', 'finger-button')
+        container.appendChild(link)
+
+        root.appendChild(container)
+      }
+
+    </script>
+
+  </body>
+
+</html>
