@@ -23,7 +23,7 @@
     <script type="text/javascript" src="posts/post.js"></script>
     <script type="text/javascript">
     
-      let root = document.getElementById('main-body')
+      let bodyElement = document.getElementById('main-body')
       // Loop through all the available posts
       for(let key in POSTS) {
         let container = document.createElement('div')
@@ -38,7 +38,7 @@
         link.setAttribute('class', 'finger-button')
         container.appendChild(link)
 
-        root.appendChild(container)
+        bodyElement.appendChild(container)
       }
 
     </script>
