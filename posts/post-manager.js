@@ -3,7 +3,7 @@ const POSTS = {
 }
 
 const setPostContent = post => {
-  fetch(post).then(res => {
+  fetch(`posts/${post}`).then(res => {
     let postContainer = document.getElementById('post-content')
     postContainer.innerHTML = res.text()
   })
