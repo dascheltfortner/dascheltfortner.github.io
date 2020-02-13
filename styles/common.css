@@ -40,7 +40,7 @@ body {
   flex-grow: 5;
 }
 
-#new-post:first-child {
+#new-post a {
   font-size: xxx-large;
   font-style: italic;
   text-decoration: none;
