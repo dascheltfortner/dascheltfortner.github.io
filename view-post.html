@@ -2,25 +2,28 @@
 <html>
 
   <head>
-    <title>Daschel Fortner's Personal Page</title>
+    <title>In Pursuit of Grace</title>
     <link rel="stylesheet" type="text/css" href="styles/common.css" />
     <link rel="stylesheet" type="text/css" href="styles/header.css" />
-    <link rel="stylesheet" type="text/css" href="styles/projects.css" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
   </head>
 
-  <body id="main-body">
+  <body>
+
+    <script type="text/javascript" src="posts/post-manager.js"></script>
 
     <div class="vignette">
     </div>
 
-    <div id="header">
-      <script type="text/javascript" src="header.js"></script>
+    <div id="newspaper-title">
+      <h1 id="newspaper-title-text">In Pursuit of Grace</h1>
+      <span id="newspaper-subtitle-text">- Musings of a common egghead -</span>
     </div>
 
-    <script type="text/javascript" src="posts/post-manager.js"></script>
+    <hr class="thin-divider"></hr>
+    <hr class="thick-divider"></hr>
+
+    <h1 id="post-title"></h1>
 
     <div id="post-content">
     </div>
@@ -28,10 +31,8 @@
     <script type="text/javascript">
       let url = window.location.search
       let params = url.split('?')[1]
-      console.log(params)
       let value = decodeURIComponent(params.split('=')[1])
-      console.log(value)
-      let post = setPostContent(value)
+      let post = viewPost(value)
     </script>
 
   </body>

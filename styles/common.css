@@ -43,6 +43,7 @@ body {
 #new-post:first-child {
   font-size: xxx-large;
   font-style: italic;
+  text-decoration: none;
 }
 
 #post-content {
@@ -120,3 +121,25 @@ body {
   width: 100%;
   z-index: -100;
 }
+
+.thin-divider {
+  border: none;
+  border-top: 1px solid var(--dark);
+  width: 100%;
+}
+
+.thick-divider {
+  border: none;
+  border-top: 3px solid var(--dark);
+  width: 100%;
+}
+
+/* view-post.html styles */
+
+#post-title {
+  text-align: center;
+  font-size: xxx-large;
+  font-style: italic;
+}
+
+/* end */

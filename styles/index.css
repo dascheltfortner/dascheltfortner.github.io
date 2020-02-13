@@ -89,14 +89,3 @@
 
 /* NEW STUFF */
 
-.thin-divider {
-  border: none;
-  border-top: 1px solid var(--dark);
-  width: 100%;
-}
-
-.thick-divider {
-  border: none;
-  border-top: 3px solid var(--dark);
-  width: 100%;
-}
