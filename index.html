@@ -2,10 +2,12 @@
 <html>
 
   <head>
-    <title>Daschel Fortner's Personal Page</title>
+    <title>In Pursuit of Grace</title>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/common.css" />
     <link rel="stylesheet" type="text/css" href="styles/header.css" />
     <link rel="stylesheet" type="text/css" href="styles/index.css" />
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,61 +15,53 @@
 
   <body>
 
+    <script type="text/javascript" src="posts/post-manager.js"></script>
+
     <div class="vignette">
     </div>
 
-    <div id="header">
-      <script type="text/javascript" src="header.js"></script>
+    <hr class="thin-divider"></hr>
+
+    <div id="newspaper-title">
+      <h1 id="newspaper-title-text">In Pursuit of Grace</h1>
+      <span id="newspaper-subtitle-text">- Musings of a common egghead -</span>
     </div>
 
-    <h1 id="centered-text">WELCOME TO MY DOMAIN!</h1>
+    <hr class="thin-divider"></hr>
+    <hr class="thick-divider"></hr>
 
-    <div id="welcome-section">
-      <img src="images/old-timey-desk.jpg" alt="You can't handle a thousand words.">
-      </img>
+    <div id="content">
+
+      <div id="new-post">
+        <div>On Righteousness</div>
+        <div id="post-content-wrapper">
+          <div class="image-wrapper">
+            <img src="images/old-timey-fiddle.png"></img>
+          </div>
+          <div id="post-content">
+          </div>
+        </div>
+      </div>
+
+      <div id="navigation-content"> 
+        <div id="about-me">
+          <div class="content-title">Find out who's to blame</div>
+          <p>This is text explaing things about me and then have a link.</p>
+        </div>
+
+        <div id="recent-posts">
+          <div class="content-title">More things to feed your eyes</div>
+          <hr class="thin-divider"></hr>
+          <p>First link</p>
+          <p>Second link</p>
+        </div>
+      </div>
+
+      <script type="text/javascript">
+        setPostPreview()
+      </script>
+      
     </div>
 
-    <div id="redirect-section">
-
-      <div class="redirect-box">
-        <h2>
-          PROJECTS
-        </h2>
-        <a href="projects.html" class="finger-button"></a>
-        <p>
-          If your interest is piqued by the curiousities currently on display,
-          consider exploring further curiousities by viewing some of my past
-          projects. You will most likely discover nothing of real value, with a
-          high probability of disappointment. You will, however, most 
-          definitely satisfy your own curiosity, and your fate appears much 
-          more promising than the cat's.  
-        </p>
-      </div>
-
-      <div class="redirect-box">
-        <h2>
-          RESUME
-        </h2>
-        <a href="" class="finger-button"></a>
-        <p>
-          To inquire concerning my whereabouts in the past, and the present,
-          enter here. There comes a time in a man's life when he must face 
-          the fact that, though man cannot live by bread alone, he must eat 
-          bread. It is a feature of reality that such wares require finances.
-          Here, you can learn about the various avenues through which I have 
-          attained said bread. 
-        </p>
-      </div>
-
-      <div class="redirect-box">
-        <h2>
-          POSTS
-        </h2>
-        <a href="posts.html" class="finger-button"></a>
-        <p>
-          Insert quippy intro here
-        </p>
-      </div>
-    </div>
   </body>
 </html>
