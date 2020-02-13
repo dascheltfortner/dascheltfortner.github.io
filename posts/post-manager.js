@@ -17,8 +17,13 @@ const getPost = index => {
 }
 
 const setPostPreview = () => {
+  // Update the post's title
+  let postTitleContainer = document.getElementById('new-post-title')
+  postTitleContainer.innerHTML = POSTS[0].title
+
   getPost(0).then(post => {
     post.text().then(text => {
+      // Update the preview text
       let previewText = `${text.substring(0, 1000)}...`
       let previewContainer = document.getElementById('post-content')
       previewContainer.innerHTML = previewText
