@@ -19,7 +19,7 @@ const getPost = index => {
 const setPostPreview = () => {
   getPost(0).then(post => {
     post.text().then(text => {
-      let previewText = `${text.substring(0, 500)}...`
+      let previewText = `${text.substring(0, 1000)}...`
       let previewContainer = document.getElementById('post-content')
       previewContainer.innerHTML = previewText
     })
